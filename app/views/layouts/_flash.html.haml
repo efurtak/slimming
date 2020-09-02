@@ -1,0 +1,13 @@
+- if flash
+  - if notice
+    %p.notice
+      %div.alert.alert-success.alert-dismissible.fade.show{ :role => 'alert' }
+        = notice
+        %button.close{ 'data-dismiss' => 'alert' }
+          %span{ 'aria-hidden' => 'true' } &times;
+  - if alert
+    %p.alert
+      %div.alert.alert-danger.alert-dismissible.fade.show{ :role => 'alert' }
+        = alert
+        %button.close{ 'data-dismiss' => 'alert' }
+          %span{ 'aria-hidden' => 'true' } &times;
