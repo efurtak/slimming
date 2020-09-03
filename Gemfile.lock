@@ -90,6 +90,10 @@ GEM
     coderay (1.1.3)
     concurrent-ruby (1.1.7)
     crass (1.0.6)
+    database_cleaner (1.8.5)
+    database_cleaner-active_record (1.8.0)
+      activerecord
+      database_cleaner (~> 1.8.0)
     debug_inspector (0.0.3)
     devise (4.7.2)
       bcrypt (~> 3.0)
@@ -274,6 +278,7 @@ DEPENDENCIES
   bootstrap (~> 4.5.2)
   byebug
   capybara
+  database_cleaner-active_record
   devise
   dotenv-rails
   haml-rails
