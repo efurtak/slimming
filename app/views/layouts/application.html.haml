@@ -8,12 +8,13 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    .container
-      .row
+    .container-fluid.p-0
+      .row.no-gutters
         .col
           .menu
             = render partial: 'layouts/menu/top'
-      .row
+      .row.no-gutters
         .col
-          = render partial: 'layouts/flash'
-          = yield
+          .container
+            = render partial: 'layouts/flash'
+            = yield
