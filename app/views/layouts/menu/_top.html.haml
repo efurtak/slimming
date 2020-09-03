@@ -1,0 +1,12 @@
+.menu-elements
+  .menu-element.left
+    = image_tag('logo-small.png', class: 'logo-small')
+  .menu-element.right
+    - if user_signed_in?
+      = link_to 'Account', root_path
+      |
+      logged in as: #{current_user.first_name} #{current_user.last_name}
+      |
+      = link_to 'Sign out', destroy_user_session_path, method: :delete
+    - else
+      = link_to 'Log in', new_user_session_path
