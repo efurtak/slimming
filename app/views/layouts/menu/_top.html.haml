@@ -1,12 +1,24 @@
 .menu-elements
   .menu-element.left
-    = image_tag('logo-small.png', class: 'logo-small')
+    %div
+      %i.fas.fa-running.fa-3x.app-logo.mr-4
+    .app.app-title.mr-4
+      Slimming App 
+    .app.app-slogan
+      Your weight tracker
+      %i.fas.fa-calendar-check
   .menu-element.right
     - if user_signed_in?
-      = link_to 'Account', root_path
+      = link_to root_path do
+        %i.far.fa-address-card
+        Account
       |
-      Logged in as: #{current_user.first_name} #{current_user.last_name}
+      #{current_user.first_name} #{current_user.last_name}
       |
-      = link_to 'Sign out', destroy_user_session_path, method: :delete
+      = link_to destroy_user_session_path, method: :delete do
+        %i.fas.fa-door-open
+        Sign out
     - else
-      = link_to 'Log in', new_user_session_path
+      = link_to new_user_session_path do
+        %i.fas.fa-sign-in-alt
+        Log in

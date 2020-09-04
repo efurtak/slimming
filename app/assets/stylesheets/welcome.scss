@@ -1,7 +1,12 @@
 .menu {
   height: 64px;
-  background-color: #f3f3f3;
-  margin-bottom: 32px;
+  background-color: #333;
+  color: gray;
+  border-bottom: 5px solid gray;
+}
+
+.menu a {
+  color: white;
 }
 
 .menu-elements {
@@ -10,10 +15,40 @@
   justify-content: space-between;
 }
 
-.logo-small {
-  padding: 5px;
+.menu-element.left {
+  display: flex;
+  align-items: center;
+}
+
+.app-logo {
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.app-title {
+  font-family: 'Yellowtail';
+  font-size: 32px;
+  color: white;
 }
 
 .menu-element.right {
   margin-right: 15px;
+}
+
+/**/
+
+.submenu {
+  height: 64px;
+  background-color: #e2e2e2;
+  color: gray;
+
+  margin-bottom: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .btn {
+    border-radius: 0px;
+  }
 }
