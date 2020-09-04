@@ -11,5 +11,21 @@ module DeviseHelpers
 
     click_on 'Sign up'
   end
+
+  def user_sign_out
+    visit root_path
+    click_on 'Sign out'
+  end
+
+  def user_log_in(email:, password: 'password')
+    visit new_user_session_path
+
+    fill_in 'user_email', with: email
+    fill_in 'user_password', with: password
+
+    within('div.actions') do
+      click_on 'Log in'
+    end
+  end
   
 end
