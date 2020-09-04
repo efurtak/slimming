@@ -5,8 +5,24 @@
     %title Slimming
     = csrf_meta_tags
     = csp_meta_tag
+    
+    %meta{:name => 'viewport', :content => 'width=device-width, initial-scale=1, shrink-to-fit=no'}
+    
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+
+    %link{ :href => "https://fonts.googleapis.com/css2?family=Yellowtail&display=swap", :rel => "stylesheet" }
   %body
-    = render partial: 'layouts/flash'
-    = yield
+    .container-fluid.p-0
+      .row.no-gutters
+        .col
+          .menu
+            = render partial: 'layouts/menu/top'
+          - if user_signed_in?
+            .submenu
+              = render partial: 'layouts/menu/submenu'
+      .row.no-gutters
+        .col
+          .container
+            = render partial: 'layouts/flash'
+            = yield

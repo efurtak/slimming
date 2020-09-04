@@ -1,3 +1,54 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.menu {
+  height: 64px;
+  background-color: #333;
+  color: gray;
+  border-bottom: 5px solid gray;
+}
+
+.menu a {
+  color: white;
+}
+
+.menu-elements {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-element.left {
+  display: flex;
+  align-items: center;
+}
+
+.app-logo {
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.app-title {
+  font-family: 'Yellowtail';
+  font-size: 32px;
+  color: white;
+}
+
+.menu-element.right {
+  margin-right: 15px;
+}
+
+/**/
+
+.submenu {
+  height: 64px;
+  background-color: #e2e2e2;
+  color: gray;
+
+  margin-bottom: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .btn {
+    border-radius: 0px;
+  }
+}
