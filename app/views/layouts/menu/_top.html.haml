@@ -1,4 +1,5 @@
 .menu-elements
+  
   .menu-element.left
     %div
       %i.fas.fa-running.fa-3x.app-logo.mr-4
@@ -7,13 +8,16 @@
     .app.app-slogan
       Your weight tracker
       %i.fas.fa-calendar-check
+  
   .menu-element.right
     - if user_signed_in?
-      = link_to root_path do
+      - if current_user.avatar.attached?
+        = image_tag(current_user.avatar.variant(resize_and_pad: [58, 58, background: [0,0,0]]), class: 'mr-2')
+      #{current_user.first_name} #{current_user.last_name}
+      |
+      = link_to account_path(current_user.id) do
         %i.far.fa-address-card
         Account
-      |
-      #{current_user.first_name} #{current_user.last_name}
       |
       = link_to destroy_user_session_path, method: :delete do
         %i.fas.fa-door-open

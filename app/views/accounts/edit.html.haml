@@ -1,0 +1,45 @@
+%h1
+  = @user.first_name
+  = @user.last_name
+
+%br
+
+= form_with model: @user, url: account_path, local: true do |f| 
+  
+  - if @user.errors.any?
+    %h2 
+      = pluralize(@user.errors.size, 'error')
+      prohibited user from being updated:
+    %ul
+      - @user.errors.full_messages.each do |msg| 
+        %li
+          = msg
+
+  %p
+    = f.label :first_name, 'First name:'
+    %br
+    = f.text_field :first_name, value: @user.first_name, class: 'form-control'
+    %br
+    = f.label :last_name, 'Last name:'
+    %br
+    = f.text_field :last_name, value: @user.last_name, class: 'form-control'
+
+  %br
+
+  %p
+    = f.label :avatar, 'Upload avatar:'
+    %br
+    = f.file_field :avatar
+
+  %br
+
+  %p
+    = f.label :height, 'Set height (in centimeters):'
+    %br
+    = f.text_field :height, class: 'form-control'
+
+  %br
+
+  %p
+    = f.submit class: 'btn btn-dark'
+    = link_to 'Cancel', account_path(@user.id), class: 'btn btn-dark'
