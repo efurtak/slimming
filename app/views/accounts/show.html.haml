@@ -1,0 +1,23 @@
+%h1
+  Account
+
+%h2
+  = @user.first_name
+  = @user.last_name
+
+%p
+  - if @user.avatar.attached?
+    = image_tag(@user.avatar.variant(resize_and_pad: [200, 200, background: [0,0,0]]))
+  - else
+    %i.fas.fa-user-circle.fa-9x
+
+%p
+  Height:
+  - if @user.height.present?
+    = @user.height
+    cm
+  - else
+    not set
+
+%p
+  = link_to "Edit user", edit_account_path(current_user.id), class: 'btn btn-dark'
