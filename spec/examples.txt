@@ -1,8 +1,9 @@
-example_id                                       | status | run_time        |
------------------------------------------------- | ------ | --------------- |
-./spec/feature/devise/1_create_user_spec.rb[1:1] | passed | 0.06244 seconds |
-./spec/feature/devise/1_create_user_spec.rb[1:2] | passed | 0.04152 seconds |
-./spec/feature/devise/1_create_user_spec.rb[1:3] | passed | 0.05222 seconds |
-./spec/feature/devise/1_create_user_spec.rb[1:4] | passed | 0.0455 seconds  |
-./spec/feature/devise/2_log_in_user_spec.rb[1:1] | passed | 0.10992 seconds |
-./spec/feature/devise/2_log_in_user_spec.rb[1:2] | passed | 0.2296 seconds  |
+example_id                                        | status | run_time        |
+------------------------------------------------- | ------ | --------------- |
+./spec/feature/devise/1_create_user_spec.rb[1:1]  | passed | 0.04922 seconds |
+./spec/feature/devise/1_create_user_spec.rb[1:2]  | passed | 0.04317 seconds |
+./spec/feature/devise/1_create_user_spec.rb[1:3]  | passed | 0.06776 seconds |
+./spec/feature/devise/1_create_user_spec.rb[1:4]  | passed | 0.04299 seconds |
+./spec/feature/devise/2_log_in_user_spec.rb[1:1]  | passed | 0.11854 seconds |
+./spec/feature/devise/2_log_in_user_spec.rb[1:2]  | passed | 0.11735 seconds |
+./spec/feature/devise/3_log_out_user_spec.rb[1:1] | passed | 0.24562 seconds |
