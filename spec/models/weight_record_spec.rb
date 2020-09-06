@@ -43,6 +43,4 @@ RSpec.describe WeightRecord, 'Is invalid weight record', type: :model do
 
     expect(weight_record).not_to be_valid
   end
-
-
 end
