@@ -1,0 +1,27 @@
+%h1
+  Weight history
+
+%br
+
+%table.table
+  %thead.thead-dark
+    %tr
+      %th
+        \#
+      %th
+        Date
+      %th
+        Weight
+      %th
+        \-
+  %tbody
+    - @records.each_with_index do |record, i| 
+      %tr
+        %td
+          = i + 1
+        %td
+          = record.date
+        %td
+          = record.weight
+        %td
+          = link_to 'Edit', edit_weight_record_path(record.id)

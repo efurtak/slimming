@@ -1,0 +1,27 @@
+= form_with model: @record, local: true do |f| 
+  
+  - if @record.errors.any?
+    %h2
+      = pluralize(@record.errors.size, 'error')
+      \:
+    %ul
+      - @record.errors.full_messages.each do |msg| 
+        %li
+          = msg
+
+  %p
+    = f.label :date, 'Choose date:'
+    %br
+    = f.date_select :date
+
+  %br
+
+  %p
+    = f.label :weight, 'Current weight:'
+    %br
+    = f.text_field :weight, class: 'form-control'
+
+  %br
+
+  %p
+    = f.submit class: 'btn btn-dark'
