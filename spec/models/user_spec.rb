@@ -38,6 +38,23 @@ describe User, 'Is valid user', type: :model do
     
     expect(user).to be_valid
   end
+
+  it 'Have unique email' do
+    user = User.new
+    user.first_name = 'Jan'
+    user.last_name = 'Kowalski'
+    user.email = 'jkowalski@example.com'
+    user.password = 'password'
+    user.save
+    expect(user).to be_valid
+
+    user2 = User.new
+    user2.first_name = 'Jan'
+    user2.last_name = 'Kowalski'
+    user2.email = 'jan.kowalski@example.com'
+    user2.password = 'password'
+    expect(user2).to be_valid    
+  end
 end
 
 describe User, 'Is invalid user', type: :model do
@@ -79,5 +96,22 @@ describe User, 'Is invalid user', type: :model do
     user.password = nil
     
     expect(user).not_to be_valid
+  end
+
+  it 'Dont have unique email' do
+    user = User.new
+    user.first_name = 'Jan'
+    user.last_name = 'Kowalski'
+    user.email = 'jkowalski@example.com'
+    user.password = 'password'
+    user.save
+    expect(user).to be_valid
+
+    user2 = User.new
+    user2.first_name = 'Jan'
+    user2.last_name = 'Kowalski'
+    user2.email = 'jkowalski@example.com'
+    user2.password = 'password'
+    expect(user2).not_to be_valid    
   end
 end

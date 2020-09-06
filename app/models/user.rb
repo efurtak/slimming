@@ -22,6 +22,7 @@ class User < ApplicationRecord
 
   has_one_attached :avatar
 
+  validates :email, uniqueness: true
   validates :first_name, :last_name, presence: true
   validates :height, numericality: { only_integer: true, greater_than: 0 }, allow_blank: true, on: :update
 end
