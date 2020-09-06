@@ -38,6 +38,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara'
   gem 'dotenv-rails'
+  gem 'factory_bot_rails'
   gem 'rspec-rails', '~> 4.0.1'
 end
 
@@ -51,7 +52,6 @@ group :development do
 
   gem "better_errors"
   gem "binding_of_caller"
-  gem 'factory_bot'
   gem 'letter_opener'
   gem 'pry-rails'
   gem 'table_print'
