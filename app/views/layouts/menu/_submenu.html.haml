@@ -1,12 +1,13 @@
 .submenu-elements
-  %button.btn.btn-dark
+  = link_to new_weight_record_path, class: 'btn btn-dark mr-1' do
     %i.far.fa-plus-square
     Add weight record
   
-  %button.btn.btn-dark
+  = link_to weight_records_path, class: 'btn btn-dark mr-1' do
     %i.far.fa-file-alt
     Weight history
-  
+
+
   %button.btn.btn-dark
     %i.far.fa-chart-bar
     BMI
