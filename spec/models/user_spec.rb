@@ -13,6 +13,7 @@
 #  first_name             :string
 #  last_name              :string
 #  height                 :integer
+#  preferred_weight       :float
 #
 require 'rails_helper'
 
@@ -35,6 +36,30 @@ describe User, 'Is valid user', type: :model do
     user.password = 'password'
 
     user.height = 180
+    
+    expect(user).to be_valid
+  end
+
+  it 'Have integer preferred weight' do
+    user = User.new
+    user.first_name = 'Jan'
+    user.last_name = 'Kowalski'
+    user.email = 'jkowalski@example.com'
+    user.password = 'password'
+
+    user.preferred_weight = 120
+    
+    expect(user).to be_valid
+  end
+
+  it 'Have floating point preferred weight' do
+    user = User.new
+    user.first_name = 'Jan'
+    user.last_name = 'Kowalski'
+    user.email = 'jkowalski@example.com'
+    user.password = 'password'
+
+    user.preferred_weight = 120.5
     
     expect(user).to be_valid
   end

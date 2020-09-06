@@ -20,4 +20,12 @@
     not set
 
 %p
+  Preferred weight:
+  - if @user.preferred_weight.present?
+    = @user.preferred_weight
+    kg
+  - else
+    not set
+
+%p
   = link_to "Edit user", edit_account_path(current_user.id), class: 'btn btn-dark'

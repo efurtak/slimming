@@ -41,5 +41,12 @@
   %br
 
   %p
+    = f.label :preferred_weight, 'Set preferred weight (in kilograms):'
+    %br
+    = f.text_field :preferred_weight, class: 'form-control'
+
+  %br
+
+  %p
     = f.submit class: 'btn btn-dark'
     = link_to 'Cancel', account_path(@user.id), class: 'btn btn-dark'

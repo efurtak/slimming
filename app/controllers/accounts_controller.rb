@@ -22,6 +22,6 @@ class AccountsController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :avatar, :height)
+    params.require(:user).permit(:first_name, :last_name, :avatar, :height, :preferred_weight)
   end
 end
