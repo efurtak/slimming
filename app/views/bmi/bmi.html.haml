@@ -11,19 +11,18 @@
 
       %p
         Height:
-        = @height.to_f / 100
-        m
+        = height_or_message(height: @height)
 
       %p
         Weight:
-        = @weight
-        kg
+        = weight_or_message(weight: @weight)
 
-      %h2
-        BMI:
+      - if @bmi
+        %h2
+          BMI:
 
-        %p
-          = @bmi
+          %p
+            = @bmi
 
     .col-6
       %table.table

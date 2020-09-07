@@ -14,4 +14,6 @@ class WeightRecord < ApplicationRecord
 
   validates :date, :weight, presence: true
   validates :weight, numericality: { greater_than: 0 }
+
+  scope :date_desc, -> { order(date: :desc) }
 end
