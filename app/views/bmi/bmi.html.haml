@@ -1,0 +1,97 @@
+%h1
+  Body mass index (BMI)
+
+%br
+
+.container
+  .row
+    .col-6
+      %h2
+        Values:
+
+      %p
+        Height:
+        = @height.to_f / 100
+        m
+
+      %p
+        Weight:
+        = @weight
+        kg
+
+      %h2
+        BMI:
+
+        %p
+          = @bmi
+
+    .col-6
+      %table.table
+        %thead.thead-dark
+          %tr
+            %th{:rowspan => 2}
+              Category
+            %th{:colspan => 2}
+              BMI
+          %tr
+            %th
+              from
+            %th
+              to
+        %tbody
+          %tr
+            %td
+              Very severely underweight
+            %td
+              \-
+            %td
+              15
+          %tr
+            %td
+              Severely underweight
+            %td
+              15
+            %td
+              16
+          %tr
+            %td
+              Underweight
+            %td
+              16
+            %td
+              18.5
+          %tr
+            %td
+              Normal (healthy weight)
+            %td
+              18.5
+            %td
+              25
+          %tr
+            %td
+              Overweight
+            %td
+              25
+            %td
+              30
+          %tr
+            %td
+              Moderately obese
+            %td
+              30
+            %td
+              35
+          %tr
+            %td
+              Severely obese
+            %td
+              35
+            %td
+              40
+          %tr
+            %td
+              Very severely obese
+            %td
+              40
+            %td
+              \-  
