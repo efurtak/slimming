@@ -4,19 +4,12 @@ class BmiController < ApplicationController
   def bmi
     user = User.find(current_user.id)
     
-    if user.height.present?
-      @height = user.height
-    else
-      @height = 0
-    end
+    @height = user.height || 0
+    @weight = user.weight_records.date_desc.first.try(:weight) || 0
 
-    if user.weight_records.first.present?
-      @weight = user.weight_records.order(date: :desc).first.weight
-    else
-      @weight = 0
+    if @height > 0 && @weight > 0
+      @bmi = (@weight.to_f / ((@height.to_f / 100) ** 2)).round(2)
     end
-
-    @bmi = (@weight.to_f / ((@height.to_f / 100) ** 2)).round(2)
 
   end
 end
