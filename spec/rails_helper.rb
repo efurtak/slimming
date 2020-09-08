@@ -11,7 +11,9 @@ require 'capybara/rails'
 require 'support/database_cleaner'
 require 'support/factory_bot'
 
+require 'support/account/account_helpers'
 require 'support/devise/devise_helpers'
+require 'support/weight/weight_helpers'
 
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -69,5 +71,7 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 
+  config.include AccountHelpers, type: :feature
   config.include DeviseHelpers, type: :feature
+  config.include WeightHelpers, type: :feature
 end
