@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- ruby 2.70
+- rails 6.0.3.2
 
-Things you may want to cover:
+- clone repo and run `rails s`
+- sqlite3 db is populated with one user
 
-* Ruby version
+## login as normal user:
 
-* System dependencies
+- login: jdoe@example.com
+- password: password
 
-* Configuration
+## try to add own user
+- in Account page:
+  - add avatar
+  - set height
+  - set preferred weight
 
-* Database creation
+## visit http://localhost:3000/admin to log into ActiveAdmin panel:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- login: admin@example.com
+- password: password
