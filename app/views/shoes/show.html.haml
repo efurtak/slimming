@@ -1,0 +1,17 @@
+%h2
+  = @shoe.name
+
+%br
+
+.container
+  .row
+    .col-5
+      %p
+        = image_tag(@shoe.thumbnail)
+      %p
+        Price: 
+        = @shoe.price
+      %br
+      = link_to 'Back', shoes_path, class: 'btn btn-dark'
+    .col-7
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec consequat diam. Maecenas est mauris, vestibulum in purus ac, ultrices porta urna. Donec feugiat vestibulum condimentum. Mauris faucibus, erat maximus egestas aliquam, mi enim maximus dui, non congue dui ipsum ac augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed lobortis vel augue in condimentum. Etiam risus dui, efficitur quis massa a, mollis suscipit augue. Nam placerat ipsum in ipsum ullamcorper suscipit. Mauris nisl ligula, dictum at laoreet vel, finibus consequat nulla. Nullam iaculis erat a nisi ultricies interdum. Mauris eu pulvinar turpis. Praesent ex metus, fermentum nec enim sed, dignissim sollicitudin purus. Nulla quis est porttitor nibh aliquet consectetur. Maecenas dictum pretium tortor. Praesent mollis semper quam, ac venenatis nisi pellentesque id. Vivamus vitae felis elementum, venenatis orci non, pulvinar elit.
