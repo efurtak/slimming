@@ -1,6 +1,6 @@
 # README
 
-- ruby 2.70
+- ruby 2.7.0
 - rails 6.0.3.2
 
 - clone repo and run `rails s`
@@ -11,13 +11,14 @@
 - login: jdoe@example.com
 - password: password
 
-## try to add own user
+## try to add own user at `http://localhost:3000/users/sign_up`
+
 - in Account page:
   - add avatar
   - set height
   - set preferred weight
 
-## visit http://localhost:3000/admin to log into ActiveAdmin panel:
+## visit `http://localhost:3000/admin` to log into ActiveAdmin panel:
 
 - login: admin@example.com
 - password: password
