@@ -28,5 +28,5 @@ class User < ApplicationRecord
   validates :height, numericality: { only_integer: true, greater_than: 0 }, allow_blank: true, on: :update
   validates :preferred_weight, numericality: { greater_than: 0}, allow_blank: true, on: :update
 
-  has_many :weight_records
+  has_many :weight_records, dependent: :destroy
 end

@@ -7,15 +7,10 @@
     %i.far.fa-file-alt
     Weight history
 
-
   = link_to bmi_path, class: 'btn btn-dark mr-1' do
     %i.far.fa-chart-bar
     BMI
 
-  %button.btn.btn-info
-    %i.fas.fa-running
-    Choose discipline
-  
-  %button.btn.btn-info
+  = link_to shoes_path, class: 'btn btn-info' do
     %i.fas.fa-shoe-prints
     Choose shoes
