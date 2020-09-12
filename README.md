@@ -13,7 +13,7 @@
 
 ## try to add own user at `http://localhost:3000/users/sign_up`
 
-- in Account page:
+- after registering and logging in, in Account page:
   - add avatar
   - set height
   - set preferred weight
